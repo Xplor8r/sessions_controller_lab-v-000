@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
 
   def destroy
     #session.delete :name
-    session[:name].delete
+    session[:name] == nil
     redirect_to controller: 'application', action: 'hello'
   end
 end
