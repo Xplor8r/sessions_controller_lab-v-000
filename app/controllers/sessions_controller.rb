@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
 
   def create
     if session[:name]
-      
+      redirect_to controller: 'application', action: 'hello'
     elsif params[:name]
       session[:name] = params[:name]
       redirect_to controller: 'sessions', action: 'new'
