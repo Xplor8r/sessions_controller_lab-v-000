@@ -13,6 +13,6 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:name].destroy
-    redirect_to controller: 'sessions', action: 'new'
+    redirect_to controller: 'application', action: 'hello'
   end
 end
