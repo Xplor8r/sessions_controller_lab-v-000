@@ -12,9 +12,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    if session[:name]
-      session[:name] == nil
-      redirect_to controller: 'application', action: 'hello'
-    end
+    session.clear
+    redirect_to controller: 'application', action: 'hello'
   end
 end
