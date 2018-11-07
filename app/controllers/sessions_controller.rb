@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
       session[:name] = params[:name]
       redirect_to controller: 'application', action: 'hello'
 
-    else
+    elsif params[:name] == ""
       redirect_to controller: 'sessions', action: 'new'
     end
   end
